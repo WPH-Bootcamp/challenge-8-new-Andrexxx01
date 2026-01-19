@@ -1,2 +1,119 @@
 @import 'tailwindcss';
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-neutral-25: #fdfdfd;
+    --color-neutral-50: #fafafa;
+    --color-neutral-100: #f5f5f5;
+    --color-neutral-200: #e9eaeb;
+    --color-neutral-300: #d5d7da;
+    --color-neutral-400: #a4a7ae;
+    --color-neutral-500: #717680;
+    --color-neutral-600: #535862;
+    --color-neutral-700: #414651;
+    --color-neutral-800: #252b37;
+    --color-neutral-900: #181d27;
+    --color-neutral-950: #0a0d12;
+    --color-primary-100: #f3ebff;
+    --color-primary-200: #8b32ff;
+    --color-primary-300: #6600eb;
+    --color-primary-400: #160131;
+
+    --spacing-s-none: 0px;
+    --spacing-s-xxs: 2px;
+    --spacing-s-xs: 4px;
+    --spacing-s-sm: 6px;
+    --spacing-s-md: 8px;
+    --spacing-s-lg: 12px;
+    --spacing-s-xl: 16px;
+    --spacing-s-2xl: 20px;
+    --spacing-s-3xl: 24px;
+    --spacing-s-4xl: 32px;
+    --spacing-s-5xl: 40px;
+    --spacing-s-6xl: 48px;
+    --spacing-s-7xl: 64px;
+    --spacing-s-8xl: 80px;
+    --spacing-s-9xl: 96px;
+    --spacing-s-10xl: 128px;
+    --spacing-s-11xl: 140px;
+
+    --text-xs: 12px;
+    --text-xs--line-height: 24px;
+    --text-sm: 14px;
+    --text-sm--line-height: 28px;
+    --text-md: 16px;
+    --text-md--line-height: 30px;
+    --text-lg: 18px;
+    --text-lg--line-height: 32px;
+    --text-xl: 20px;
+    --text-xl--line-height: 34px;
+    --text-display-xs: 24px;
+    --text-display-xs--line-height:36px;
+    --text-display-sm: 28px;
+    --text-display-sm--line-height: 38px;
+    --text-display-md: 32px;
+    --text-display-md--line-height: 46px;
+    --text-display-lg: 36px;
+    --text-display-lg--line-height: 48px;
+    --text-display-xl: 40px;
+    --text-display-xl--line-height: 56px;
+    --text-display-2xl: 48px;
+    --text-display-2xl--line-height: 60px;
+    --text-display-3xl: 60px;
+    --text-display-3xl--line-height: 72px;
+
+    --radius-none: 0px;
+    --radius-xxs: 2px;
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-3xl: 20px;
+    --radius-4xl: 24px;
+    --radius-full: 9999px;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 p-0 bg-black text-white scroll-smooth;
+    font-family: var(--font-poppins);
+  }
+
+}
+
+@layer utilities {
+  @keyframes rotate-wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-30deg); }
+    50% { transform: rotate(30deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .hover-rotate-wiggle:hover {
+    animation: rotate-wiggle 0.4s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE & Edge */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
+  }
+}
+

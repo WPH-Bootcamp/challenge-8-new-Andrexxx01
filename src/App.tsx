@@ -1,11 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home";
+import MovieDetailPage from "./pages/movieDetail";
+import FavoritesPage from "./pages/favoritesPage";
 
-
-export const App = () => {
+const App = () => {
   return (
-    <div className="text-red-500">
-      App
-    </div>
-  )
-}
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/:movieTitle/detail" element={<MovieDetailPage />} />
+      <Route path="/favorites" element={<FavoritesPage />} />
+    </Routes>
+  );
+};
 
 export default App;
